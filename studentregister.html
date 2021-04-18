@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      body{
+      background-image: url("https://pactrack.sarjen.com/wp-content/uploads/2017/03/Employee-Management.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100%;
+      }
+      p{
+            text-align: center;
+      }
+      
+      button{
+            width: 100px;
+            height:50px;
+            background-color:purple;
+            border-radius:50px;
+            color: white;
+        }
+      .container{
+            background-color:wheat;
+            border-radius: 25px;
+            width: 500px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+
+      }
+      input[type=text]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+            text-align: start;
+
+
+        }
+        input[type=text]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            
+        }
+        input[type=password]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+        }
+        input[type=password]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            box-align:initial;
+	}
+        input[type=date]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+        }
+        input[type=date]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            box-align:initial;
+
+        }
+        input[type=number]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+        }
+        input[type=number]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            box-align:initial;
+
+        }
+        input[type=E-mail]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+        }
+        input[type=E-mail]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            box-align:initial;
+
+        }
+        input[type=phone]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+        }
+        input[type=phone]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            box-align:initial;
+
+        }
+        select[id=Department]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+        }
+        select[id=Department]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            box-align:initial;
+
+        }
+        select[id=Staffs]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+        }
+        select[id=Staffs]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            box-align:initial;
+
+        }
+       
+          
+</style>
+<body>
+     
+      <h1 style="text-align:center">Student Signup</h1>
+        <div class="Container">
+        <form action="" method="POST">
+            {% csrf_token %}
+       <div class="container">
+             <br>
+            <p><label for="UserName"><b>UserName</b></label>
+            <input type="text" name="UserName" placeholder="Enter your Name"></p>
+            
+            <p><label for="User id"><b>User id</b></label>
+            <input type="number" name="User id" placeholder="Enter your ID"></p>
+            
+
+            <p><label for ="E-Mail"><b>E-mail ID</b></label><input type="E-mail" name="MailId" placeholder="abc@gmail.com">
+            <p><label for="Date of Birth"><b>DOB</b></label>
+            <input type="date" name="Date of Birth"></p>
+            <p><label ><b>Department</b></label><select id="Department" name="Department" >
+            <option value="CSE">CSE</option>
+            <Option value="ECE">ECE</option>
+            <Option value="EEE">EEE</option>
+            <option value="Mech">Mechanical</Option>
+            <Option value="BioMedical">BioMedical</option>
+            <Option value="Civil">Civil</option>
+            </select> </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
+           <p><label for="Staffs"><b>Staff</b></label>
+            <select id="Staffs" name="Staffname" >
+                  {% for staff in staffs %}
+            <option value={{staff.staffname}}>{{staff.staffname}} ({{staff.Department}})</option>
+                  {% endfor %}
+</select></p>
+     
+
+           <p><label for ="Phone number"><b>Phone number</b></label>
+            <input type="phone" name="Phone number" placeholder="Enter your phone number"></p>
+            
+     
+            <p><label for="password" ><b>Password</b></label>
+            <input type="password" name="password" placeholder="Enter your password"></p>
+      
+
+           <p><label for="password" ><b>Confirm-Password</b></label>
+            <input type="password" name="password" placeholder="Enter your confirm-password"></p>
+         
+            <p><label for="Parent's Name"><b>Parent Name</b></label>
+            <input type="text" name="Parent Name" placeholder="Enter parent name"></p>
+            <p><label for="Parent's email"><b>Parent email</b></label>
+            <input type="text" name="Parent email" placeholder="Enter parent mail"></p>
+           
+
+         <p style=text-align:center;><button type="submit" ><p>send otp</p></button><a href="localhost.studentdetails"></a></p>
+         <br>
+            </form>
+            </div>
+</body>
+</html>
+
+<!----
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+      $('#Department').change(function(){
+     department = $(this).val();
+      request_url = '/get_staffs';
+        $.ajax({
+            url: request_url,
+            method:'get',
+            dataType:'json',
+            data:{'department':department,csrfmiddlewaretoken:'{{csrf_token}}'},
+            success: function(res){
+            $.each(res, function(r){
+                $('#Department').append(
+                $('<option></option>').val(r).html(r)
+                )
+              });
+            }
+      })
+});
+
+</script>
+

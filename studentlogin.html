@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+
+</head>
+<style>
+    body{
+        background-image: url("https://www.suman.co.in/local/images/media/4_1533897867.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        font-size: medium;
+        color:black;
+        }
+        .container{
+            background-color:wheat;
+            border-radius: 25px;
+            width: 500px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            color:black;
+           }
+        button{
+            width: 100px;
+            height:50px;
+            background-color:purple;
+            border-radius:50px;
+            color:wheat;
+        }
+        .text{
+            border-radius: 25px;
+            box-sizing: border-box;
+        }
+        .g-recaptcha{
+            margin: 10px 100px;
+        }
+        input[type=text]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+            text-align: start;
+
+
+        }
+        input[type=text]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            
+        }
+        input[type=password]{
+            border: 2px solid purple;
+            width:40%;
+            border-radius: 8px;
+            margin: 8px 0;
+            outline:none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            position: relative;
+        }
+        input[type=password]:focus{
+            border-color: purple;
+            box-shadow: 0 0 8px 0 purple;
+            margin-left: 5%;
+            position: relative;
+            box-align:initial;
+
+        }
+        label{
+        
+            margin-left:5%;
+            position: relative;
+            
+            
+        }
+        
+
+        
+</style>
+<body>
+    <h1 style="text-align:center;">Student Login</h1>
+  <div class="Container">
+
+        
+        <form action="" method="POST" >
+            {% csrf_token %} 
+        <br>
+           <p style=text-align:center;><label for="Uname"><b>User ID</b></label>
+            <input type="text" name="Userid" placeholder="Enter your ID"></p>
+<br>
+           <p style=text-align:center;><label for="psw"><b>password</b></label>
+            <input type="password" name="password" placeholder="Enter your password"></p>
+<br>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<div class="g-recaptcha" data-sitekey="6Lc3tp8aAAAAABa5tOWjToYrDenb44aJQJMoNSI4"></div>
+
+<p style=text-align:center;><button type="submit">LOGIN</button></p>
+<br>
+<p style=text-align:center;><label for="Forgot Password":></label><b>"Forgot password": </b></label> <a href="password_reset" ><b>Click here</b></a>.</p>
+   
+<p style=text-align:center;><label for="Don't have an account":></label><b>"Don't have an account":</b> </label> <a href="studentregister"><b>Signup</b></a>.</p>
+<br>
+<br>
+
+   </form>
+   </div>
+</body>
+</html>
